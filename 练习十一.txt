@@ -1,0 +1,53 @@
+练习题11：2300学校招生人数echarts可视化展示
+//数据过滤
+f5 = open("2.txt",'w',encoding="utf-8")
+data1=[]
+data2=[]
+file2=open('C:/Users/JinF/Desktop/大数据实训/全国大学文科河北录取人数.txt',encoding='gbk').readlines()
+for j in range(len(f3)): 
+    data1.append('\''+file2[j].split('(')[1].split(',')[0]+'\''+',')
+    data2.append(file2[j].split(',')[1].split(')')[0]+',')
+
+    #f5.write(str(i.split(',')[1].split('(')[0])+',')
+f5.close()
+//可视化展示
+app.title = '全国大学文科河北招生人数 - 条形图';
+
+option = {
+    title: {
+        text: '全国大学文科河北招生人数 ',
+        subtext: '数据来自网络'
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
+    },
+    legend: {
+        data: ['2011年', '2012年']
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'value',
+        boundaryGap: [0, 0.01]
+    },
+    yAxis: {
+        type: 'category',
+        data: ['学校']
+    },
+    series: [
+        {
+            name: '2011年',
+            type: 'bar',
+            data: ['招生人数']
+        },
+        {
+            name: '2012年',
+            type: 'bar',
+           };
